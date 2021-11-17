@@ -1,5 +1,5 @@
 <template>
-    <input type="radio" :change="onChange" value="klaus" />
+    <input type="radio" value="foo" />
 </template>
 <script lang="ts">
 import { defineComponent } from '@vue/composition-api'
