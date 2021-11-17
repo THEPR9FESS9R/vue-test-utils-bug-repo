@@ -8,6 +8,8 @@ it('should set radio button to checked via click', async () => {
     await subject.trigger('click')
 
     expect(inputEle.checked).toBe(true)
+
+    subject.destroy()
 })
 
 it('should set radio button to checked via setChecked()', async () => {
@@ -25,7 +27,5 @@ it('should set radio button to checked via setChecked()', async () => {
     */
     expect(inputEle.checked).toBe(true)
 
-    await subject.trigger('click')
-
-    expect(inputEle.checked).toBe(true)
+    subject.destroy()
 })
