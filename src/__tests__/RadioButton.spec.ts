@@ -1,7 +1,16 @@
 import { mount } from '@vue/test-utils'
 import RadioButton from '../RadioButton.vue'
 
-it('should set radio button to checked', async () => {
+it('should set radio button to checked via click', async () => {
+    const subject = mount(RadioButton)
+    const inputEle = subject.element as HTMLInputElement
+
+    await subject.trigger('click')
+
+    expect(inputEle.checked).toBe(true)
+})
+
+it('should set radio button to checked via setChecked()', async () => {
     const subject = mount(RadioButton)
     const inputEle = subject.element as HTMLInputElement
 
@@ -14,5 +23,9 @@ it('should set radio button to checked', async () => {
       Accordion to the documentation 'inputEle.checked' should be true
       https://vue-test-utils.vuejs.org/api/wrapper/#setchecked
     */
+    expect(inputEle.checked).toBe(true)
+
+    await subject.trigger('click')
+
     expect(inputEle.checked).toBe(true)
 })
