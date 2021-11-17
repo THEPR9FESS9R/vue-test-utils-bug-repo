@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "allowJs": true,
+        "target": "es5",
+        "module": "esnext",
+        "lib": ["ESNext", "DOM"],
+        "noImplicitAny": true,
+        "removeComments": false,
+        "preserveSymlinks": true,
+        "sourceMap": true,
+        "esModuleInterop": true,
+        "experimentalDecorators": true,
+        "resolveJsonModule": true,
+        "moduleResolution": "node",
+        "baseUrl": "./",
+        "outDir": "./dist"
+    },
+    "include": ["src/**/*.ts", "src/**/*.vue", "**/*.svg"]
+}
